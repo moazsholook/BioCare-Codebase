@@ -25,7 +25,7 @@ boolean newData = false;
 void setup() {
   Serial.begin(115200);
 
-  // Set outputs
+  // Set outputs & default state
   finger1.attach(f1);
   finger1.write(0);
 
@@ -41,6 +41,7 @@ void setup() {
 }
 
 void loop() {
+  // Read serial input
   recvOneChar();
   showNewData();
 
