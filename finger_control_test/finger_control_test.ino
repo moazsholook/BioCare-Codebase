@@ -1,15 +1,18 @@
 #include <Servo.h>
 
+//Set servo names
 Servo finger1;
 Servo finger2;
 Servo finger3;
 Servo finger4;
 
+//Set servo pins
 int f1 = 50;
 int f2 = 51;
 int f3 = 52;
 int f4 = 4;
 
+//Set servo state (Open/close)
 boolean fb1 = false;
 boolean fb2 = false;
 boolean fb3 = false;
@@ -35,18 +38,11 @@ void setup() {
   finger4.attach(f4);
   finger4.write(0);
   
-
-
 }
 
 void loop() {
   recvOneChar();
   showNewData();
-/*
-  delay(1000);
-  finger1.write(180);
-  delay(1000);
-  finger1.write(0);*/
 
   if (receivedChar == '1'){
     // Toggle finger one
