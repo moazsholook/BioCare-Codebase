@@ -1,3 +1,9 @@
+// Test to control the servo motors via serial commands. 
+// 1. Hookup the servos to the arduino (or esp32) according to the pins set below or reconfigure the below pins to suit your needs. 
+// 2. Flash this program to the microcontroller
+// 3. Open the serial monitor and type '1','2','3', or '4' and enter to toggle the state of each finger (open/close). Or type '5' to open/close the whole hand (this toggle is based on the position of finger 1).
+
+
 #include <Servo.h>
 
 //Set servo names
